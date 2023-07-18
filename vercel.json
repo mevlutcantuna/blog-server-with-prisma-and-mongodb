@@ -1,11 +1,15 @@
 {
     "version": 2,
     "builds": [
-      { "src": "prisma/schema.prisma", "use": "@prisma/cli" },
-      { "src": "index.ts", "use": "@vercel/node" }
+        {
+            "src":"./index.js",
+            "use": "@vercel/node"
+        }
     ],
-    "routes": [{ "src": "/(.*)", "dest": "api/$1.ts" }],
-    "env": {
-      "PRISMA_DATABASE_URL": "mongodb+srv://mevlutcantuna:52600625@cluster0.4rtglm1.mongodb.net/server-for-blog-ft?retryWrites=true&w=majority"
-    }
-  }
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"/"
+        }
+    ]
+}
