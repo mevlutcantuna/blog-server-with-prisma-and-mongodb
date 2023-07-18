@@ -35,6 +35,15 @@ app.post(
     },
 )
 
+app.get("/users", async (req: express.Request, res: express.Response) => {
+    try {
+        const users = await prisma.user.findMany()
+        res.status(200).json(users)
+    } catch (error) {
+        res.status(500).json({ error: "Something went wrong!" })
+    }
+})
+
 const port = process.env.PORT || 8080
 
 app.listen(port, () => {
