@@ -1,10 +1,10 @@
 import cors from "cors"
 import express from "express"
-import { PrismaClient } from "@prisma/client"
+//import { PrismaClient } from "@prisma/client"
 import dotenv from "dotenv"
 dotenv.config()
 
-const prisma = new PrismaClient()
+//const prisma = new PrismaClient()
 const app = express()
 app.use(cors())
 app.use(express.json()) // For parsing JSON data
@@ -14,6 +14,7 @@ app.get("/", (req: express.Request, res: express.Response) => {
     res.send("Hello World!23")
 })
 
+/*
 app.post(
     "/create-user",
     async (req: express.Request, res: express.Response) => {
@@ -43,6 +44,7 @@ app.get("/users", async (req: express.Request, res: express.Response) => {
         res.status(500).json({ error: "Something went wrong!" })
     }
 })
+ */
 
 const port = process.env.PORT || 8080
 
