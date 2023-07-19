@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
     res.send("Blog Prisma - MongoDB Server!");
 });
 
-app.use(router);
+app.use("/api/", router);
 
 const port = process.env.PORT || 8080;
 
