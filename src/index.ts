@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 //app.use(router);
 
-app.post("/signup", signup);
+//app.post("/signup", signup);
 //app.post("/login", login);
 //app.get("/user", getUser);
 
