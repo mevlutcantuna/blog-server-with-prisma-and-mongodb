@@ -15,7 +15,8 @@ app.get("/", (req, res) => {
     res.send("Blog Prisma - MongoDB Server!");
 });
 
-//app.use(router);
+/*
+app.use(router);
 
 app.get("/users", async (req: any, res: any) => {
     try {
@@ -25,6 +26,7 @@ app.get("/users", async (req: any, res: any) => {
         res.status(500).json({ error: "Something went wrong!" });
     }
 });
+ */
 
 const port = process.env.PORT || 8080;
 
