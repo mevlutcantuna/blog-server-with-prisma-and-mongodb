@@ -1,11 +1,10 @@
 import "dotenv/config";
 import cors from "cors";
 import express from "express";
-import router from "./routes/auth.ts";
-import { PrismaClient } from "@prisma/client";
+//import router from "./routes/auth.ts";
+//import { PrismaClient } from "@prisma/client";
 
 const app = express();
-const prisma = new PrismaClient();
 
 app.use(cors());
 app.use(express.json());
@@ -17,7 +16,6 @@ app.get("/", (req, res) => {
 
 /*
 app.use(router);
- */
 
 app.get("/users", async (req: any, res: any) => {
     try {
@@ -27,6 +25,7 @@ app.get("/users", async (req: any, res: any) => {
         res.status(500).json({ error: "Something went wrong!" });
     }
 });
+ */
 
 const port = process.env.PORT || 8080;
 
