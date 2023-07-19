@@ -9,15 +9,15 @@
   "scripts": {
     "start": "node ./src/index.ts",
     "dev": "nodemon ./src/index.ts",
-    "format": "prettier --write './**/*.ts'",
-    "lint": "eslint --fix './**/*.ts'",
+    "format": "prettier --write './src/**/*.{ts,js,json,css,scss,md}'",
+    "lint": "eslint --fix './src/**/*.{ts,js}'",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "./**/*.{ts,js}": [
+    "./src/**/*.{ts,js}": [
       "prettier --write"
     ],
-    "./**/*.{ts,js,json,css,scss,md}": [
+    "./src/**/*.{ts,js,json,css,scss,md}": [
       "eslint --fix"
     ]
   },
