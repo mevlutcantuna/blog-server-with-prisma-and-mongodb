@@ -6,6 +6,7 @@ const router = express.Router();
 //router.post("/signup", signup);
 //router.post("/login", login);
 //router.get("/user", getUser);
+
 router.get("/can", (req, res) => {
     res.send("cantuna");
 });
