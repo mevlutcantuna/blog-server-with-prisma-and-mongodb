@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
     res.send("Blog Prisma - MongoDB Server!");
 });
 
-app.use(router);
+//app.use(router);
 
 app.get("/users", async (req: any, res: any) => {
     try {
