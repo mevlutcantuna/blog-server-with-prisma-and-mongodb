@@ -1,14 +1,14 @@
-import "dotenv/config";
-import cors from "cors";
-import express from "express";
-import router from "./routes/auth.ts";
+require("dotenv").config();
+const cors = require("cors");
+const express = require("express");
+const router = require("./routes/auth.ts");
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
+app.get("/", (req: any, res: any) => {
     res.send("Blog Prisma - MongoDB Server!");
 });
 
