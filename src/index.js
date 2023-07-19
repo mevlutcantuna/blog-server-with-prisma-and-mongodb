@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json()) // For parsing JSON data
 app.use(express.urlencoded({ extended: true })) // For parsing URL-encoded data
 
-app.get("/", (req: express.Request, res: express.Response) => {
+app.get("/", (req, res) => {
     res.send("Hello World!23")
 })
 /*

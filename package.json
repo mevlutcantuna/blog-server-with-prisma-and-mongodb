@@ -7,11 +7,8 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": "node ./src/index.ts",
-    "dev": "nodemon ./src/index.ts",
-    "build": "rimraf dist && tsc",
-    "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist",
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
     "format": "prettier --write './src/**/*.ts'",
     "lint": "eslint --fix './src/**/*.ts'",
     "prepare": "husky install"
@@ -24,11 +21,6 @@
       "eslint --fix"
     ]
   },
-  "pre-commit": [
-    "ts.check",
-    "build",
-    "add-build"
-  ],
   "keywords": [],
   "author": "MCT",
   "license": "MIT",
