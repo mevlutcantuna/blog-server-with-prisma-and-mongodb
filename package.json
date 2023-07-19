@@ -9,7 +9,6 @@
   "scripts": {
     "start": "node ./index.js",
     "dev": "nodemon ./index.js",
-    "vercel-build": "tsc && prisma db push",
     "format": "prettier --write './**/*.js'",
     "lint": "eslint --fix './**/*.js'",
     "prepare": "husky install"
