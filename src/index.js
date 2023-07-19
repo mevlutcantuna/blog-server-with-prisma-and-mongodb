@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-    res.send("Blog Prisma - MongoDB Server!");
+    res.send("Blog Prisma - MongoDB Server! 2323");
 });
 
 app.use(router);
