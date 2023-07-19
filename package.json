@@ -11,7 +11,8 @@
     "dev": "nodemon ./src/index.js",
     "format": "prettier --write './src/**/*.{ts,js,json,css,scss,md}'",
     "lint": "eslint --fix './src/**/*.{ts,js}'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "prisma generate"
   },
   "lint-staged": {
     "./src/**/*.{ts,js}": [
