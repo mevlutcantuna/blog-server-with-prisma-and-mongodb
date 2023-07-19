@@ -1,8 +1,8 @@
 import "dotenv/config";
 import cors from "cors";
 import express from "express";
-import router from "./routes/auth.ts";
-//import { PrismaClient } from "@prisma/client";
+//import router from "./routes/auth.ts";
+import { PrismaClient } from "@prisma/client";
 
 const app = express();
 
@@ -13,9 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
     res.send("Blog Prisma - MongoDB Server!");
 });
+/*
 
 app.use(router);
-/*
+ */
+const prisma = new PrismaClient();
 app.get("/users", async (req: any, res: any) => {
     try {
         const users = await prisma.user.findMany();
@@ -24,7 +26,6 @@ app.get("/users", async (req: any, res: any) => {
         res.status(500).json({ error: "Something went wrong!" });
     }
 });
- */
 
 const port = process.env.PORT || 8080;
 
