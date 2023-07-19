@@ -46,8 +46,6 @@ const login = async (req: express.Request, res: express.Response) => {
 };
 
 const getUser = async (req: express.Request, res: express.Response) => {
-    res.send("Blog Prisma - MongoDB Server!");
-    /*
     try {
         const user = await prisma.user.findUnique({
             where: { id: req.headers.authorization?.split(" ")[1] as any },
@@ -60,8 +58,6 @@ const getUser = async (req: express.Request, res: express.Response) => {
     } catch (error) {
         res.status(500).json({ error: "Something went wrong!" });
     }
-
-     */
 };
 
 export { signup, login, getUser };
