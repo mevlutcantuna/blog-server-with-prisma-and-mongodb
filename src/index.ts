@@ -1,7 +1,7 @@
 import "dotenv/config";
 import cors from "cors";
 import express from "express";
-//import router from "./routes/auth.ts";
+import router from "./routes/auth.ts";
 //import { PrismaClient } from "@prisma/client";
 
 const app = express();
@@ -14,9 +14,8 @@ app.get("/", (req, res) => {
     res.send("Blog Prisma - MongoDB Server!");
 });
 
-/*
 app.use(router);
-
+/*
 app.get("/users", async (req: any, res: any) => {
     try {
         const users = await prisma.user.findMany();
