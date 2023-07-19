@@ -2,7 +2,6 @@ import "dotenv/config";
 import cors from "cors";
 import express from "express";
 import router from "./routes/auth.ts";
-import { PrismaClient } from "@prisma/client";
 
 const app = express();
 
@@ -16,7 +15,6 @@ app.get("/", (req, res) => {
 
 app.use(router);
 
-const prisma = new PrismaClient();
 /*
 app.get("/users", async (req: any, res: any) => {
     try {
