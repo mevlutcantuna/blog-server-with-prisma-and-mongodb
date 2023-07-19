@@ -14,11 +14,7 @@ app.get("/", (req, res) => {
     res.send("Blog Prisma - MongoDB Server!");
 });
 
-//app.use(router);
-
-//app.post("/signup", signup);
-//app.post("/login", login);
-//app.get("/user", getUser);
+app.use(router);
 
 const port = process.env.PORT || 8080;
 
