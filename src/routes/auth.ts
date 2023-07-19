@@ -3,8 +3,8 @@ import { getUser, login, signup } from "../controllers/auth.ts";
 
 const router = express.Router();
 
-router.get("/22", (req, res) => {
-    res.send("Blog Prisma - MongoDB Server 222!");
+router.get("/deneme", (req, res) => {
+    res.send("Blog Prisma - MongoDB Server Deneme!");
 });
 
 //router.post("/signup", signup);
