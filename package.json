@@ -12,7 +12,7 @@
     "format": "prettier --write './src/**/*.{ts,js,json,css,scss,md}'",
     "lint": "eslint --fix './src/**/*.{ts,js}'",
     "prepare": "husky install",
-    "vercel-build": "node ./src/index.js && prisma generate "
+    "vercel-build": "node ./src/index.js && npx prisma generate"
   },
   "lint-staged": {
     "./src/**/*.{ts,js}": [
