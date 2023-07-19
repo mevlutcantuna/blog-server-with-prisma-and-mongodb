@@ -7,10 +7,10 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": "node ./src/index.js",
-    "dev": "nodemon ./src/index.js",
-    "format": "prettier --write './src/**/*.ts'",
-    "lint": "eslint --fix './src/**/*.ts'",
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js",
+    "format": "prettier --write './**/*.js'",
+    "lint": "eslint --fix './**/*.js'",
     "prepare": "husky install"
   },
   "lint-staged": {
