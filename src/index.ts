@@ -2,6 +2,7 @@ import "dotenv/config";
 import cors from "cors";
 import express from "express";
 import router from "./routes/auth.ts";
+import { getUser } from "./controllers/auth.ts";
 
 const app = express();
 
@@ -14,6 +15,8 @@ app.get("/", (req, res) => {
 });
 
 app.use(router);
+
+app.get("/user", getUser);
 
 const port = process.env.PORT || 8080;
 
