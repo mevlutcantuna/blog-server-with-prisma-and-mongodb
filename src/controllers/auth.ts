@@ -21,7 +21,6 @@ const signup = async (req: express.Request, res: express.Response) => {
         });
         res.status(201).json(newUser);
     } catch (error) {
-        console.log(error);
         res.status(500).json({ error: "Something went wrong!" });
     }
 };
@@ -48,6 +47,7 @@ const login = async (req: express.Request, res: express.Response) => {
 
 const getUser = async (req: express.Request, res: express.Response) => {
     try {
+        /**
         const user = await prisma.user.findUnique({
             where: { id: req.headers.authorization?.split(" ")[1] as any },
         });
@@ -55,7 +55,10 @@ const getUser = async (req: express.Request, res: express.Response) => {
         if (!user)
             return res.status(401).json({ message: "User doesn't found!" });
 
-        return res.status(200).json({ ...user, token: generateToken(user.id) });
+
+            return res.status(200).json({ ...user, token: generateToken(user.id) });
+         */
+        return res.status(201);
     } catch (error) {
         res.status(500).json({ error: "Something went wrong!" });
     }
