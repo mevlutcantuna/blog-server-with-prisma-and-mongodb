@@ -4,6 +4,7 @@ import express from "express";
 //import router from "./routes/auth.ts";
 import { PrismaClient } from "@prisma/client";
 
+const prisma = new PrismaClient();
 const app = express();
 
 app.use(cors());
@@ -13,11 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
     res.send("Blog Prisma - MongoDB Server!");
 });
-/*
 
+/*
 app.use(router);
  */
-const prisma = new PrismaClient();
+
 app.get("/users", async (req: any, res: any) => {
     try {
         const users = await prisma.user.findMany();
