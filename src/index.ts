@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 app.use(router);
 
 const prisma = new PrismaClient();
-
+/*
 app.get("/users", async (req: any, res: any) => {
     try {
         const users = await prisma.user.findMany();
@@ -26,6 +26,7 @@ app.get("/users", async (req: any, res: any) => {
         res.status(500).json({ error: "Something went wrong!" });
     }
 });
+ */
 
 const port = process.env.PORT || 8080;
 
