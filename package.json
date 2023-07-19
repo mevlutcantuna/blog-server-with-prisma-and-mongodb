@@ -7,17 +7,17 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": "node ./index.js",
-    "dev": "nodemon ./index.js",
-    "format": "prettier --write './**/*.js'",
-    "lint": "eslint --fix './**/*.js'",
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "format": "prettier --write './src/**/*.js'",
+    "lint": "eslint --fix './src/**/*.js'",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "./**/*.{ts,js}": [
+    "./src/**/*.{ts,js}": [
       "prettier --write"
     ],
-    "./**/*.{ts,js,json,css,scss,md}": [
+    "./src/**/*.{ts,js,json,css,scss,md}": [
       "eslint --fix"
     ]
   },
