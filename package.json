@@ -7,8 +7,8 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": "node ./index.ts",
-    "dev": "nodemon ./index.ts",
+    "start": "node ./src/index.ts",
+    "dev": "nodemon ./src/index.ts",
     "format": "prettier --write './**/*.ts'",
     "lint": "eslint --fix './**/*.ts'",
     "prepare": "husky install"
