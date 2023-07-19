@@ -11,10 +11,7 @@
     "dev": "nodemon ./src/index.js",
     "format": "prettier --write './src/**/*.{ts,js,json,css,scss,md}'",
     "lint": "eslint --fix './src/**/*.{ts,js}'",
-    "prepare": "husky install",
-    "vercel-build": "npm run prisma-generate && vercel build",
-    "prisma-generate": "npx prisma generate"
-
+    "prepare": "husky install"
   },
   "lint-staged": {
     "./src/**/*.{ts,js}": [
