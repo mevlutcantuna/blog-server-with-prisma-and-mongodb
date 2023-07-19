@@ -7,8 +7,8 @@ router.get("/deneme", (req, res) => {
     res.send("Blog Prisma - MongoDB Server Deneme!");
 });
 
-router.post("/signup", signup);
-router.post("/login", login);
-router.get("/user", getUser);
+//router.post("/signup", signup);
+//router.post("/login", login);
+//router.get("/user", getUser);
 
 export default router;
