@@ -2,6 +2,7 @@ import "dotenv/config";
 import cors from "cors";
 import express from "express";
 import router from "./routes/auth.ts";
+import { signup } from "./controllers/auth.ts";
 
 const app = express();
 
@@ -16,6 +17,8 @@ app.get("/", (req, res) => {
 app.get("/deneme", (req, res) => {
     res.send("Blog Prisma - MongoDB Server! deneme");
 });
+
+app.post("/signup", signup);
 
 //app.use(router);
 
