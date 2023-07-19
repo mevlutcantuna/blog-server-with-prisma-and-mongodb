@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
     res.send("Hello World!23")
 })
 
-app.post("/create-user", async (req, res) => {
+app.post("/create-user", async (req: any, res: any) => {
     const { fullName, email, password } = req.body
 
     try {
@@ -32,7 +32,7 @@ app.post("/create-user", async (req, res) => {
     }
 })
 
-app.get("/users", async (req, res) => {
+app.get("/users", async (req: any, res: any) => {
     try {
         const users = await prisma.user.findMany()
         res.status(200).json(users)
