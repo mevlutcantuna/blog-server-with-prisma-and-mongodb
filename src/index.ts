@@ -2,7 +2,6 @@ import "dotenv/config";
 import cors from "cors";
 import express from "express";
 import router from "./routes/auth.ts";
-import { getUser, login, signup } from "./controllers/auth.ts";
 
 const app = express();
 
@@ -14,7 +13,7 @@ app.get("/", (req, res) => {
     res.send("Blog Prisma - MongoDB Server!");
 });
 
-app.use(router);
+//app.use(router);
 
 const port = process.env.PORT || 8080;
 
