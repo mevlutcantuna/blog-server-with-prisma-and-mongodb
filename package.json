@@ -2,13 +2,13 @@
   "name": "prisma-mongodb",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
   "engines": {
     "node": "18.x"
   },
   "scripts": {
-    "start": "tsc ./src/index.ts",
-    "dev": "nodemon ./src/index.ts",
+    "start": "tsc ./src/index.js",
+    "dev": "nodemon ./src/index.js",
     "format": "prettier --write './src/**/*.{ts,js,json,css,scss,md}'",
     "lint": "eslint --fix './src/**/*.{ts,js}'",
     "prepare": "husky install"
