@@ -1,9 +1,9 @@
-const express = require("express");
+import express from "express";
 //import { getUser, login, signup } from "../controllers/auth.ts";
 
 const router = express.Router();
 
-router.get("/deneme", (req: any, res: any) => {
+router.get("/deneme", (req, res) => {
     res.send("Blog Prisma - MongoDB Server Deneme!");
 });
 
@@ -11,4 +11,4 @@ router.get("/deneme", (req: any, res: any) => {
 //router.post("/login", login);
 //router.get("/user", getUser);
 
-module.exports = router;
+export default router;
