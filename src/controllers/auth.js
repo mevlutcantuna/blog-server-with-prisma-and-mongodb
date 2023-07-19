@@ -1,15 +1,13 @@
-/*
-import express from "express";
 import { PrismaClient } from "@prisma/client";
 import {
     compareHashedPasswordWithPassword,
     generateHashedPassword,
     generateToken,
-} from "../utils/index.ts";
+} from "../utils/index.js";
 
 const prisma = new PrismaClient();
 
-const signup = async (req: express.Request, res: express.Response) => {
+const signup = async (req, res) => {
     const { fullName, email, password } = req.body;
 
     try {
@@ -26,7 +24,7 @@ const signup = async (req: express.Request, res: express.Response) => {
     }
 };
 
-const login = async (req: express.Request, res: express.Response) => {
+const login = async (req, res) => {
     const { email, password } = req.body;
 
     try {
@@ -46,10 +44,10 @@ const login = async (req: express.Request, res: express.Response) => {
     }
 };
 
-const getUser = async (req: express.Request, res: express.Response) => {
+const getUser = async (req, res) => {
     try {
         const user = await prisma.user.findUnique({
-            where: { id: req.headers.authorization?.split(" ")[1] as any },
+            where: { id: req.headers.authorization?.split(" ")[1] },
         });
 
         if (!user)
@@ -62,4 +60,3 @@ const getUser = async (req: express.Request, res: express.Response) => {
 };
 
 export { signup, login, getUser };
- */
