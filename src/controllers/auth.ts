@@ -1,3 +1,4 @@
+/*
 import express from "express";
 import { PrismaClient } from "@prisma/client";
 import {
@@ -61,3 +62,4 @@ const getUser = async (req: express.Request, res: express.Response) => {
 };
 
 export { signup, login, getUser };
+ */
