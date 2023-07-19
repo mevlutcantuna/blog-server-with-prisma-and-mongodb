@@ -7,11 +7,12 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": "tsc ./src/index.js",
+    "start": "node ./src/index.js",
     "dev": "nodemon ./src/index.js",
     "format": "prettier --write './src/**/*.{ts,js,json,css,scss,md}'",
     "lint": "eslint --fix './src/**/*.{ts,js}'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "vercel-build": "prisma generate && node ./src/index.js"
   },
   "lint-staged": {
     "./src/**/*.{ts,js}": [
