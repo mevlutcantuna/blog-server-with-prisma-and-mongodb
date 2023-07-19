@@ -13,7 +13,6 @@ app.use(express.urlencoded({ extended: true })) // For parsing URL-encoded data
 app.get("/", (req: express.Request, res: express.Response) => {
     res.send("Hello World!23")
 })
-
 /*
 app.post(
     "/create-user",

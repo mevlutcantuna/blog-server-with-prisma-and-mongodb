@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node ./src/index.ts",
     "dev": "nodemon ./src/index.ts",
+    "build": "tsc",
     "format": "prettier --write './src/**/*.ts'",
     "lint": "eslint --fix './src/**/*.ts'",
     "prepare": "husky install"
