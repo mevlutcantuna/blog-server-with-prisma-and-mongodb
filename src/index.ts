@@ -17,8 +17,8 @@ app.get("/", (req, res) => {
 //app.use(router);
 
 app.post("/signup", signup);
-app.post("/login", login);
-app.get("/user", getUser);
+//app.post("/login", login);
+//app.get("/user", getUser);
 
 const port = process.env.PORT || 8080;
 
