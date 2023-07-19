@@ -11,17 +11,30 @@ generator client {
 }
 
 model User {
-  id       String @id @default(auto()) @map("_id") @db.ObjectId
-  email    String @unique
-  fullName String
-  password String
-  posts    Post[]
+  id               String    @id @default(auto()) @map("_id") @db.ObjectId
+  email            String    @unique
+  fullName         String
+  password         String
+  posts            Post[]
+  likedPostIds     String[]
+  favouritePostIds String[]
+  comment          Comment[]
+  imageUrl         String    @default("https://cdn.icon-icons.com/icons2/2468/PNG/512/user_icon_149329.png")
 }
 
 model Post {
-  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String
   description String
-  author      User   @relation(fields: [authorId], references: [id])
-  authorId    String @db.ObjectId
+  author      User     @relation(fields: [authorId], references: [id])
+  authorId    String   @db.ObjectId
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Comment {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  text   String
+  user   User   @relation(fields: [userId], references: [id])
+  userId String @db.ObjectId
 }
