@@ -5,6 +5,7 @@
     "module": "NodeNext",                                
     "sourceMap": true,                            
     "outDir": "./dist",
+    "allowJs": true,
     "allowImportingTsExtensions": true,
     "esModuleInterop": true,                            
     "forceConsistentCasingInFileNames": true,            

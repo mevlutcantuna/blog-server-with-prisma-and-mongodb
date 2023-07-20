@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node ./src/index.ts",
     "dev": "nodemon ./src/index.ts",
-    "build": "rimraf dist && tsc",
+    "build": "tsc",
+    "pre-prod": "rimraf dist && npm run build",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist",
     "format": "prettier --write './src/**/*.{ts,js,json,css,scss,md}'",
