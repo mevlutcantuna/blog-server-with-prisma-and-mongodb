@@ -11,6 +11,15 @@ const signup = async (req, res) => {
     const { fullName, email, password } = req.body;
 
     try {
+        const oldUser = await prisma.user.findUnique({ where: { email } });
+
+        if (oldUser)
+            return res
+                .status(401)
+                .json(
+                    "You cannot use this email, there is user with this email!",
+                );
+
         const newUser = await prisma.user.create({
             data: {
                 fullName: fullName,
