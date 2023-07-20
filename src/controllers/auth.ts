@@ -3,11 +3,11 @@ import {
     compareHashedPasswordWithPassword,
     generateHashedPassword,
     generateToken,
-} from "../utils/index.js";
+} from "../utils/index.ts";
 
 const prisma = new PrismaClient();
 
-const signup = async (req, res) => {
+const signup = async (req: any, res: any) => {
     const { fullName, email, password } = req.body;
 
     try {
@@ -24,7 +24,7 @@ const signup = async (req, res) => {
     }
 };
 
-const login = async (req, res) => {
+const login = async (req: any, res: any) => {
     const { email, password } = req.body;
 
     try {
@@ -44,7 +44,7 @@ const login = async (req, res) => {
     }
 };
 
-const getUser = async (req, res) => {
+const getUser = async (req: any, res: any) => {
     try {
         const user = await prisma.user.findUnique({
             where: { id: req.headers.authorization?.split(" ")[1] },

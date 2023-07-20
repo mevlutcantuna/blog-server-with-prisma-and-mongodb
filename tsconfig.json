@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                              
+    "lib": ["ES6"],                                       
+    "module": "NodeNext",                                
+    "sourceMap": true,                            
+    "outDir": "ts-built",
+    "rootDir": "src",                                   
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,                            
+    "forceConsistentCasingInFileNames": true,            
+    "strict": true,                                     
+    "skipLibCheck": true,
+    "noEmit": true,
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"],
+  "ts-node": {
+    "esm": true,
+    "compilerOptions": {
+      "module": "nodenext",
+    }
+  }
+}
