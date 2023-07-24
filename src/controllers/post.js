@@ -4,7 +4,6 @@ const prisma = new PrismaClient();
 
 const createPost = async (req, res) => {
     const { imageUrl, title, description, authorId } = req.body;
-    console.log(title);
     try {
         const posts = await prisma.post.create({
             data: { title, imageUrl, description, authorId },
