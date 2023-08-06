@@ -8,7 +8,7 @@ const generateToken = (id) => {
 };
 
 const verifyToken = (token) => {
-    return jwt.verify(token, process.env.JWT_SECRET);
+    return jwt.verify(token, process.env.JWT_SECRET).id;
 };
 
 const generateHashedPassword = (password) => {

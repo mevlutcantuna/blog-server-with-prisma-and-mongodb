@@ -3,6 +3,7 @@ import {
     compareHashedPasswordWithPassword,
     generateHashedPassword,
     generateToken,
+    verifyToken,
 } from "../utils/index.js";
 
 const prisma = new PrismaClient();
@@ -56,7 +57,9 @@ const login = async (req, res) => {
 const getUser = async (req, res) => {
     try {
         const user = await prisma.user.findUnique({
-            where: { id: req.headers.authorization?.split(" ")[1] },
+            where: {
+                id: verifyToken(req.headers.authorization?.split(" ")[1]),
+            },
         });
 
         if (!user)
