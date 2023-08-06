@@ -44,7 +44,7 @@ const login = async (req, res) => {
         if (!user)
             return res.status(401).json({ message: "User doesn't found!" });
 
-        if (compareHashedPasswordWithPassword(password, user.password))
+        if (!compareHashedPasswordWithPassword(password, user.password))
             return res.status(401).json({ message: "Password is wrong!" });
 
         return res.status(200).json({ ...user, token: generateToken(user.id) });

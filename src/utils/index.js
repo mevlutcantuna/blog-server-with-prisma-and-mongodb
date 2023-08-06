@@ -16,7 +16,7 @@ const generateHashedPassword = (password) => {
     return bcrypt.hashSync(password, salt);
 };
 
-const compareHashedPasswordWithPassword = (hashedPassword, password) => {
+const compareHashedPasswordWithPassword = (password, hashedPassword) => {
     return bcrypt.compareSync(password, hashedPassword);
 };
 
