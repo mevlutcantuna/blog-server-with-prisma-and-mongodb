@@ -9,8 +9,8 @@ import {
 
 const router = express.Router();
 
-router.post("/create-post", createPost);
-router.get("/get-posts", getPosts);
+router.post("/post", createPost);
+router.get("/posts", getPosts);
 router.get("/post/:id", getPostDetail);
 router.delete("/post/:id", deletePost);
 router.get("/lastest-posts", getLastestPosts);
