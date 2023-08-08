@@ -35,6 +35,6 @@
 
 -   Used for deleting a post. Accepts Bareer Token which comes with loging in. `id` is post's id.
 
-#### **GET** `/lastest-post`
+#### **GET** `/lastest-postd`
 
 -   Used for getting lastest three posts.
