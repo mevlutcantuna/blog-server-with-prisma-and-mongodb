@@ -23,9 +23,9 @@
 
 -   Used for creating a post. Accepts `imageUrl`, `authorId`, `title` and `description`.
 
-#### **GET** `/posts`
+#### **GET** `/posts?search=""`
 
--   Used for getting all posts.
+-   Used for searching and getting posts by title and description. If you dont enter search parameter it will return all posts.
 
 #### **GET** `/post/{id}`
 
