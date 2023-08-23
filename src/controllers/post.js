@@ -29,12 +29,38 @@ const createPost = async (req, res) => {
 };
 
 const getPosts = async (req, res) => {
-    try {
-        const posts = await prisma.post.findMany({
-            orderBy: { createdAt: "desc" },
-        });
+    const { search } = req.query;
 
-        return res.status(200).json(posts);
+    try {
+        if (search === "" || !search) {
+            const posts = await prisma.post.findMany({
+                orderBy: { createdAt: "desc" },
+            });
+
+            return res.status(200).json(posts);
+        } else {
+            const posts = await prisma.post.findMany({
+                orderBy: { createdAt: "desc" },
+                where: {
+                    OR: [
+                        {
+                            title: {
+                                contains: search,
+                                mode: "insensitive",
+                            },
+                        },
+                        {
+                            description: {
+                                contains: search,
+                                mode: "insensitive",
+                            },
+                        },
+                    ],
+                },
+            });
+
+            return res.status(200).json(posts);
+        }
     } catch (error) {
         res.status(500).json({ message: "Something went wrong!" });
     }
