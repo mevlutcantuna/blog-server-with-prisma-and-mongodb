@@ -1,4 +1,4 @@
-## BLOG SERVER WITH PRISMA AND MONGODB
+# BLOG SERVER WITH PRISMA AND MONGODB
 
 ```
     Development URL = http://localhost:8080/
